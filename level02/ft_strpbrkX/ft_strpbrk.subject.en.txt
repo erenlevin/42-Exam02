@@ -1,0 +1,32 @@
+Assignment name	: ft_strpbrk
+Expected files	: ft_strpbrk.c
+Allowed functions: None
+---------------------------------------------------------------
+
+Reproduce exactly the behavior of the function strpbrk
+(man strpbrk).
+
+The function should be prototyped as follows:
+
+char	*ft_strpbrk(const char *s1, const char *s2);
+
+/*Imprime el string desde que encuentra el primer caracter del string2*/
+
+int main ()
+{
+  char str[] = "This is a sample string";
+  char key[] = "aeiou";
+  char * pch;
+  printf ("Vowels in '%s': ",str);
+  pch = strpbrk (str, key);
+  while (pch != NULL)
+  {
+    printf ("%c " , *pch);
+    pch = strpbrk (pch+1,key);
+  }
+  printf ("\n");
+  return 0;
+}
+Output:
+
+Vowels in 'This is a sample string': i i a a e i 
