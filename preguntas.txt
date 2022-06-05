@@ -1,0 +1,64 @@
+Question 1 is from Level 1
+first_word: escriba solo la primera palabra de un string || hacer un while mientras no haya ' ', '\0', '\t'
+fizzbuzz: escribir numeros del 1 al 100, y que los multiplos de 3 digan fizz y los de 5 digan buzz || hacer un while en el que los residuales de 3 o 5 sean 0, y si es mayor a 9 que repita funcion, sino que use: char	str[10] = "0123456789"; write (1, &str[number % 10], 1); // write(1, &"0123456789"[number % 10], 1);
+ft_strcpy: en s1 se copian los valores de s2 hasta que s2 sea null, si usa poner el ultmo caracter en null, retornar s1
+ft_strlen: cuenta los caracteres de un string
+ft_swap: intercambia los valores de 2 enteros || se usa un temporal y las variable usan *
+putstr: escribe un string caracter por caracter || usar el while y el &str hasta que str sea null
+repeat_alpha: repite el caracter de un string en n veces segun su indice alfabetico || crear una variable contador y asignarle si en 'a' el 'a' - 64,  'b' - 64, 'A' - 96 y que escriba un while de count veces
+rev_print: escribe el string al revez || contar num caracteres, caracteres -1, while que escriba el ultimo caracter mientras va disminuyendo el contador
+rot_13: escribe el string reemplazando las letras por 13 letras siguientes del indice alfabetico || al argv sumarle +13 si esta entre A y M, y restarle 13 si esta entre N y Z, que lo escriba
+rotone: escribe el string reemplazando las letras por 1 letra siguiente del indice alfabetico || hacer que el argv se sume +1 si esta entre A y Z, si es Z -25, que lo escriba
+search_and_replace: reemplaza en el string argc1 el caracter igual al argc2 por el caracter argc3 || argc == 4, while donde argc1 == argc2 entonces argc1 = argc3, escribirlo
+ulstr: cambia el case de cada letra de un string || si es minuscula -32, si es mayuscula +32, escribirlo
+
+Question 2 is from Level 2
+alpha_mirror: reemplaza cada letra por su opuesto alfabetico, A por Z, Y por B, Case no cambia || si el argv esta entre A y Z, argv = M - (argv - N), escribirlo
+camel_to_snake: Cambia un string "HolaMundoMundial" por "hola_mundo_mundial", todos son minusculas y las palabras son separadas por un "_" || mientras el str != null, si el str es mayuscula, escribir "_" y luego su letra en minuscula (+32).
+do_op: programa que toma 3 strings, que muestra el resultado entre el argc1 y argc3 usando el operador aritmetico indicado en el argc2 (+-/*%) || usar el atoi en argc1 y argc3, hacer un if por cada operador aritmetico, usar el PRINTF para que imprima el resultado.
+ft_atoi: convierte un string a entero || se crea 3 variables enteros, contador, signo, resultado; mientras que sea str == '\n' '\t' '\v' '\r' '\f', sume contador, si str == '-' el signo *=-1, si str == '+' entonces contador++; while de resultado *= 10, resultado += str - 32, contador++; retornar resultado * signo
+ft_strcmp: retorna la diferencia entre el primer caracter diferente que se encuentre || while s1  y s2 != null y s1 == s2, i++, retornar s1 -s2
+ft_strcspn: da el numero de caracteres juntos iniciales del s1 que NOO se pueden encontrar en el s2 || doble while, si se encuentra que son iguales retornar contador, al vovler entrar al 2do while igualar el s2[0]
+ft_strdup: retorna un nuevo string con el contenido del string ingresado || contardor para el largo del string, un (char *)malloc(sizeof(char) * len + 1), igualar los strings y al ultimo poner un null
+ft_strpbrk: Imprime el string desde que encuentra el primer caracter del string2 || 2 funciones, funcion 1(int f(const char c, const char *str)) while retorna 1 *str== c, mientras ++str; strpbrk while(*s1), if(f(s1, s2) == 1) entonces retorna (char *)s1, si++;
+ft_strrev: retorna el string al revez || cuenta caracteres del str, y hace un swap con un temp del str, i++, len--, return(str)
+ft_strspn: da el numero de caracteres juntos iniciales del s1 que SII se pueden encontrar en el s2 || 2 funciones, crear strchr(const char *s, int c), while(*s != 0), if(*s == c) return ((char *)s), ++s; Funcion strspn(s1, s2), while(strchr(s2, s1[i]) == 0), break; i++;, retornar (i)
+inter: toma 2 strings, e imprime en orden y sin repetir los caracteres de s1 que se pueden encontrar en s2 || 2 funciones, primera para ver si ya esta repetida, check(char *str, char c, int position), i = 0, while(i < position), if(str[i] == c) retorna 0, i++, retorna 1; funcion2: 2 while, while(argv[1][i]), j = 0, while(argv[2][j]), if argv1i == argv2i, if funcion1 != 0, write(&), break
+is_power_of_2: retorna 1 si es multiplo de 2 || i = 1, while i <= n, if i == n return 1, i *=2, return 0
+last_word: imprime la ultima palabra de un string || cuenta num.caracteres(i) del string, i--, mientras no encuentre ' ' o '\n' => i--, que imprima hasta que encuentre el null
+max: retorna el entero mas alto de un array || max = tab[--len], while(len--) if tab[len] > max => max = tab[len], retorna(max)
+X print_bits
+X reverse_bits
+snake_to_camel: Cambia un string "hola_mundo_mundial" por "HolaMundoMundial", primera letra de una palabra es mayuscula y todo esta junto || si encuentra '_' entonces ++str y *str = *str - 32,, escribir, ++str
+X swap_bits
+union: toma 2 strings, e imprime en orden y sin repetir los caracteres de s1 y s2 || argc == 3, int c, char[128] = {0}; while *s1 != null, c = *a, if characters[c] == 0, write(1, a, 1), char[c] = 1,, ++a, while(*b != 0), c = *b, if char[c] == 0, write(1, b, 1), char[c] = 1,, ++b
+wdmatch: toma 2 string e imprime el s1 si y solo si encuentra en orden sus caracteres en el s2 "forty two" "qfqfsoudf arzgrsayns tsryegftdgs sjytwdekuooixq " || while(s1) while(s2 != s1 && s2 != 0), ++s2,, if s2 = 0 => return,, i++, ++s2,, write(1, str, i)
+
+Question 3 is from Level 3
+add_prime_sum: toma un numero entero y retorna la suma de los numeros primos inferiores || 4 funciones, F1: prime(int n), int i = 2, while i < n, if n%i == 0 => return 0,, i++, return 1,, F2: suma los enteros, retorna sum,, F3: mini atoi,, F4: putnbr(F2)
+epur_str: imprime un string siempre con 1 espacio entre sus palabras || 3funciones, F1: Skip space(char *str, int i), si el char = ' ' o '\t' => i++, retorna i,, F2: cuenta la letras d una palabra f(char *str), while(str != 0, ' ', '\t'), F3: 3 variables enteras i, first_word = 1, word_len,, i = skip_whitespace, while(str) if first_word == 0, write(" "),, word_len = F2(wordlen), write(1, str + i, word_len), i = i + word_len, first_word = 0, i = skip_whitespace
+expand_str: imprime un string con una separacion de 3 espacion entre cada palabra || igual que el anterior
+ft_atoi_base: funcion que cambia un valor en base 16 a un valor en la base indicada || 4 variables, while si hay ' ', 't''f''r''v''n', => i++,, if str = '-' => signo = -1, = '+' => signo = 1,, while(str[i]), n = str[i], if 0<=n<=9 => n-='0', if 'a'<=n<='z' => n-='a'-10, igual con 'A''Z', num = num*str_base + n, i++, finalmente signo*num
+ft_list_size: da el numero de elementos de una lista enlazada || begin_list toma la lista inicial, if begin_list == 0, retorna 0, sino retorna (1 + misma funcion(begin_list->next)), de esa forma suma 1 cada vez que repite la funcion
+ft_range: en un malloc asignar en array de enteros el rango de numeros conscutivos entre 2 enteros indicados y retornar el array || size = end - star, si hay size, ptr = (int *)malloc(sizeof(int) * size), ret = ptr, while start <= end, *ptr = star, ptr++, star++,,return(ret) 
+ft_rrange: en un malloc asignar en array de enteros el rango de numeros conscutivos en reversa entre 2 enteros indicados y retornar el array || lo mismo que el anterior, solo reemplazar star por end dentro del while
+hidenp: indicar 1 si el string1 se puede encontrar en s2 de manera consecutiva, sino retornar 0 || doble while comparando cada caracter
+lcm: funcion que encuentra el minimo comun multiplo entre 2 enteros || si alguno es 0, retornar 0, tomar el numero mayor en una variable, while(1)esta variable sumarle en 1 hasta que su residual con ambos sea 0, retornar variable
+paramsum: indicar el numero de argumentos argc indicados || ft_putnbr(argc -1),, if n >= 10, ft_putnbr(n/10),, variable = (n%10)+'0',, write(1, &variable, 1);
+pgcd: programa que indica el maximo comun denominador entre 2 enteros || atoi a las variables, variable igualar a uno de los enteros, si no tiene residuales con ambos lo retorna, sino se le va restando 1 hasta que lo encuentre, se imprime con PRINTF
+print_hex: se ingresa un numero en base 10 y lo retorna en base 16 || se crea el atoi para el argv,, if (numero >=16) => printhexa(numero/16),, write(1, &"0123456789abcdef"[n%16], 1)
+rstr_capitalizer: toma strings y pone todas en minusculas y en mayuscula la ultima letra de cada palabra, cada argumento esta separado por un \n || if str[i + 1] = ' ', '\t', '\0' => if es minuscula, pasar a mayuscula, las demas en minusculas, imprimir
+str_capitalizer: toma strings y pone todas en minusculas y en mayuscula la primera letra de cada palabra, cada argumento esta separado por un \n || while (*str), while espacios, str++,, si la primera letra es minuscula pasar a mayuscula, str++,, while haya letras (si es mayuscula pasar a minuscula) imprimir,, 
+tab_mult: escribir una tabla de multiplicar de un numero hasta la tabla del 9 || crear el atoi y ponerlo al argv, while i<= 9, ft_putnbr(i), write(" x "), ft_putnbr(numero), write(" = "), ft_putnbr(i * n),\n, i++
+
+Question 4 is from Level 4
+flood_fill: Estructura que pone el caracter 'F' a los caracteres del alrededor que son iguales al punto seleccionado en una "zona/matriz" || dentro de la funcion que nos piden se crea otra funcion fill(tab, size, begin, tab[begin.y][begin.x]);,,, fill(char **tab, t_point size, t_point cur, char to_fill),,,** if cur.x cur.y < 0 || >= size.x size.y || tab[cur.y][cur.x] != to_fill => return,,, tab[cur.y][cur.x] = 'F',, fill(tab, size, (t_point){cur.x - 1 / +1, cur.y -1 / +1}, to_fill)
+fprime: programa que tome un entero e imprima sus factores primos separados por *, pueden repetirse, puedo usar atoi y printf || n = atoi(argv[1]), si n == 1, que imprima "1", factor = 2, , while factor <= n, (if es primo(factor), si es el primero que imprima factor, si no es el primero que imprima "*factor",, first = 0,, n = n / factor) (sino es primo => factor++)
+ft_itoa: toma un valor entero y lo convierte a string || medir el largo del entero (if n <0 => contador++, while n != 0, contador++, n = n / 10), se crea la el char *result con su malloc y null al final, si numero es < 0, que escriba "-", si == 0 que escriba '0', si es != 0 => while resultado[largo] = valor absoluto (numero % 10) + '0', num = num / 10, retornar resultado
+ft_list_foreach: funcion en la que aplica otra funcion a cada dato de una lista || if begin_list == 0 => return 0,, while begin_list != 0 => (f(begin_list-> data), begin_list = begin_list -> next)
+X ft_list_remove_if: quita de la lista el elemento igual al dato de referencia indicada en la funcion || 
+X ft_split: 
+rev_wstr: programa que toma un string e invierte el orden de las palabras || variable cont1, cont2, first_word = 1,, contar el largo del string, while i >= 0,, (while i>= 0 && str[cont1] == ' ', '\0', '\t' => --i), j = i, (while j>= 0 && str[j] != ' ', '\t' => j--), (if first_word == 0 => write(' ')), (write(1, str + j + 1, i-j)), first_word = 0, i = j, 
+rostring: en un string mandar la primera palabra al final, las demas palabras mantienen su mismo orden || 
+sort_int_tab: ordenar un array de enteros en orden ascendente || swapped = 1, while swapped == 1, i = 0, swapped = 0, '('while( i < size) => (if tab[i - 1] > tab[i] => intercamibiar valores, swapped = 1); i++')'
+X sort_list: ordena de manera ascendente las listas en base a su valor entero de la variable "datos" || variable swapped = 1, variable *cur = lst; (while swapped == 1 => "("while cur != 0 && cur->next != 0 => (if cmp(cur->data, cur->next->data) == 0 => intercambiar valores(cur, cur->next), swapped = 1),, cur = cur->next")", cur = lst;),, return (lst)
